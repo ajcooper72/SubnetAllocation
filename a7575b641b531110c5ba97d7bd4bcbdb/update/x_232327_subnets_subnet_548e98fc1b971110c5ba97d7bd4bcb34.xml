@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_232327_subnets_subnet">
+    <x_232327_subnets_subnet action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <environment>dev</environment>
+        <group/>
+        <location>we</location>
+        <network_21>10.103.232.0</network_21>
+        <network_22>10.103.236.0</network_22>
+        <network_23>10.103.238.0</network_23>
+        <network_24>10.103.238.0</network_24>
+        <network_25>10.103.238.128</network_25>
+        <network_26>10.103.238.192</network_26>
+        <network_27>10.103.238.224</network_27>
+        <network_28>10.103.238.240</network_28>
+        <number>SUBNET0001625</number>
+        <order>100</order>
+        <ritm/>
+        <subnet_parent/>
+        <subnet_used/>
+        <sys_class_name>x_232327_subnets_subnet</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-18 15:27:01</sys_created_on>
+        <sys_id>548e98fc1b971110c5ba97d7bd4bcb34</sys_id>
+        <sys_name>100</sys_name>
+        <sys_package display_value="Subnet Allocation" source="x_232327_subnets">a7575b641b531110c5ba97d7bd4bcbdb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Subnet Allocation">a7575b641b531110c5ba97d7bd4bcbdb</sys_scope>
+        <sys_update_name>x_232327_subnets_subnet_548e98fc1b971110c5ba97d7bd4bcb34</sys_update_name>
+    </x_232327_subnets_subnet>
+</record_update>

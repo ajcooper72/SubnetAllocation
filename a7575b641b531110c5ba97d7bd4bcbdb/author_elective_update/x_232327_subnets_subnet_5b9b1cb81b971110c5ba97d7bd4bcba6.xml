@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_232327_subnets_subnet">
+    <x_232327_subnets_subnet action="DELETE">
+        <active>true</active>
+        <environment>dev</environment>
+        <group/>
+        <location>we</location>
+        <network_21>10.103.232.0</network_21>
+        <network_22>10.103.236.0</network_22>
+        <network_23>10.103.238.0</network_23>
+        <network_24>10.103.239.0</network_24>
+        <network_25>10.103.239.0</network_25>
+        <network_26>10.103.239.0</network_26>
+        <network_27>10.103.239.32</network_27>
+        <network_28>10.103.239.32</network_28>
+        <number>SUBNET0001372</number>
+        <order>100</order>
+        <ritm/>
+        <subnet_parent/>
+        <subnet_used/>
+        <sys_class_name>x_232327_subnets_subnet</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-18 15:14:23</sys_created_on>
+        <sys_id>5b9b1cb81b971110c5ba97d7bd4bcba6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>100</sys_name>
+        <sys_package display_value="Subnet Allocation" source="x_232327_subnets">a7575b641b531110c5ba97d7bd4bcbdb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Subnet Allocation">a7575b641b531110c5ba97d7bd4bcbdb</sys_scope>
+        <sys_update_name>x_232327_subnets_subnet_5b9b1cb81b971110c5ba97d7bd4bcba6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-18 15:14:23</sys_updated_on>
+    </x_232327_subnets_subnet>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Subnet Allocation">a7575b641b531110c5ba97d7bd4bcbdb</application>
+        <file_path/>
+        <instance_id>11fd2e98dbccc41091232f17d496192b</instance_id>
+        <instance_name>dev93507</instance_name>
+        <name>x_232327_subnets_subnet_5b9b1cb81b971110c5ba97d7bd4bcba6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_232327_subnets_subnet"><x_232327_subnets_subnet action="INSERT_OR_UPDATE"><active>true</active><environment>dev</environment><group/><location>we</location><network_21>10.103.232.0</network_21><network_22>10.103.236.0</network_22><network_23>10.103.238.0</network_23><network_24>10.103.239.0</network_24><network_25>10.103.239.0</network_25><network_26>10.103.239.0</network_26><network_27>10.103.239.32</network_27><network_28>10.103.239.32</network_28><number>SUBNET0001372</number><order>100</order><ritm/><subnet_parent/><subnet_used/><sys_class_name>x_232327_subnets_subnet</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-11-18 15:14:23</sys_created_on><sys_id>5b9b1cb81b971110c5ba97d7bd4bcba6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>100</sys_name><sys_package display_value="Subnet Allocation" source="x_232327_subnets">a7575b641b531110c5ba97d7bd4bcbdb</sys_package><sys_policy/><sys_scope display_value="Subnet Allocation">a7575b641b531110c5ba97d7bd4bcbdb</sys_scope><sys_update_name>x_232327_subnets_subnet_5b9b1cb81b971110c5ba97d7bd4bcba6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-11-18 15:14:23</sys_updated_on></x_232327_subnets_subnet></record_update>]]></payload>
+        <payload_hash>1158108767</payload_hash>
+        <record_name>100</record_name>
+        <reverted_from/>
+        <source>d786d8fc1b571110c5ba97d7bd4bcbfe</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-18 15:14:23</sys_created_on>
+        <sys_id>979b1cb81b971110c5ba97d7bd4bcba9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1848b4e1e670000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-18 15:14:23</sys_updated_on>
+        <type>Subnet</type>
+        <update_guid>db9b1cb887971110b3c64c0035f1a6a8</update_guid>
+        <update_guid_history>db9b1cb887971110b3c64c0035f1a6a8:1158108767</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="100">0d9c583c1b971110c5ba97d7bd4bcbb9</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-18 15:18:36</sys_created_on>
+        <sys_db_object display_value="" name="x_232327_subnets_subnet">x_232327_subnets_subnet</sys_db_object>
+        <sys_id>35a4e2c66b7a48da9e5d7b677046e244</sys_id>
+        <sys_metadata>5b9b1cb81b971110c5ba97d7bd4bcba6</sys_metadata>
+        <sys_name>100</sys_name>
+        <sys_package display_value="Subnet Allocation" source="x_232327_subnets">a7575b641b531110c5ba97d7bd4bcbdb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Subnet Allocation">a7575b641b531110c5ba97d7bd4bcbdb</sys_scope>
+        <sys_scope_delete display_value="">220d289861354abc8c048b55c8500344</sys_scope_delete>
+        <sys_update_name>x_232327_subnets_subnet_5b9b1cb81b971110c5ba97d7bd4bcba6</sys_update_name>
+        <sys_update_version display_value="x_232327_subnets_subnet_5b9b1cb81b971110c5ba97d7bd4bcba6">979b1cb81b971110c5ba97d7bd4bcba9</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

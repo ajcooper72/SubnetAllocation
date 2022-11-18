@@ -13,15 +13,38 @@ SubnetCreateUtils.prototype = {
         this.MAX_MASK = 28;
     },
 
-	createSubnetRecords: function(ipAddress, mask) {
-		
-	},
-	
+    createSubnetRecords: function(ipAddress, mask, environment, location) {
+        var data = lib.getSubnetData(ipAddress, mask);
+
+        data.forEach(function(_subnets) {
+            var splitSubnet = _subnets.split(',');
+
+            var fieldData = {
+                "location": location,
+                "environment": environment
+            };
+            for (var i in splitSubnet) {
+                var index = parseInt(i) + 21;
+                fieldData["network_" + index] = splitSubnet[i]
+            }
+
+            var gqCurrentSubnet = new global.GlideQuery(SubnetAllocation.SUBNET_TABLE)
+                .getBy(fieldData, 'network_21')
+                .orElse(null);
+
+            if (!gqCurrentSubnet) {
+                new global.GlideQuery(SubnetAllocation.SUBNET_TABLE)
+                    .insert(fieldData);
+            }
+
+        })
+    },
+
     getSubnetData: function(ipAddress, mask) {
         var ips = {};
         ips[ipAddress] = this._getSubnets(ipAddress, mask);
-		return this._flatten(ips);
-	},
+        return this._flatten(ips);
+    },
 
     _flatten: function(data) {
         var result = [];
@@ -53,7 +76,7 @@ SubnetCreateUtils.prototype = {
     _getSubnets: function(ip, mask) {
 
         var ipList = {};
-        if (mask > this.MAX_MASK) return;
+        if (mask >= this.MAX_MASK) return;
 
         var rootSubnet = [2, 2, [0, 0, null],
             [0, 0, null]
