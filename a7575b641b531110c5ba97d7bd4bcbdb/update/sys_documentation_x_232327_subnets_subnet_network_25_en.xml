@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="network_25" label="Network 25" language="en" table="x_232327_subnets_subnet">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>network_25</element>
+            <help/>
+            <hint/>
+            <label>Network 25</label>
+            <language>en</language>
+            <name>x_232327_subnets_subnet</name>
+            <plural>Network 25s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-11-18 14:30:57</sys_created_on>
+            <sys_name>Network 25</sys_name>
+            <sys_package display_value="Subnet Allocation" source="x_232327_subnets">a7575b641b531110c5ba97d7bd4bcbdb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Subnet Allocation">a7575b641b531110c5ba97d7bd4bcbdb</sys_scope>
+            <sys_update_name>sys_documentation_x_232327_subnets_subnet_network_25_en</sys_update_name>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_232327_subnets.SubnetCreateUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SubnetCreateUtils</name>
+        <script><![CDATA[var SubnetCreateUtils = Class.create();
+SubnetCreateUtils.prototype = {
+    initialize: function() {
+        this.MAX_MASK = 28;
+    },
+
+	createSubnetRecords: function(ipAddress, mask) {
+		
+	},
+	
+    getSubnetData: function(ipAddress, mask) {
+        var ips = {};
+        ips[ipAddress] = this._getSubnets(ipAddress, mask);
+		return this._flatten(ips);
+	},
+
+    _flatten: function(data) {
+        var result = [];
+
+        function recurse(cur, prop) {
+
+            if (Object(cur) != cur) {
+                result.push(prop);
+            } else if (Array.isArray(cur)) {
+                for (var i = 0, l = cur.length; i < l; i++)
+                    recurse(cur[i], prop ? prop + "," + i : "" + i);
+                if (l == 0)
+                    result.push(prop);
+            } else {
+                var isEmpty = true;
+                for (var p in cur) {
+                    isEmpty = false;
+                    recurse(cur[p], prop ? prop + "," + p : p);
+                }
+                if (isEmpty) {
+                    result.push(prop);
+                }
+            }
+        }
+        recurse(data, "");
+        return result;
+    },
+
+    _getSubnets: function(ip, mask) {
+
+        var ipList = {};
+        if (mask > this.MAX_MASK) return;
+
+        var rootSubnet = [2, 2, [0, 0, null],
+            [0, 0, null]
+        ]
+        var newNetwork = this._inet_aton(ip);
+        var tmpNetwork = this._network_address(newNetwork, mask);
+        var curNetwork = (newNetwork != tmpNetwork) ? tmpNetwork : newNetwork;
+
+        var ipAddresses = this._getSubnetForMask(rootSubnet, curNetwork, mask, [mask, rootSubnet[1], rootSubnet], rootSubnet[0]);
+        for (var _idx in ipAddresses) {
+            ipList[ipAddresses[_idx]] = this._getSubnets(ipAddresses[_idx], mask + 1);
+        }
+
+        return ipList;
+    },
+
+    _inet_aton: function(addrstr) {
+        var re = /^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$/;
+        var res = re.exec(addrstr);
+
+        if (res === null) {
+            return null;
+        }
+
+        for (var i = 1; i <= 4; i++) {
+            if (res[i] < 0 || res[i] > 255) {
+                return null;
+            }
+        }
+
+        return (res[1] << 24) | (res[2] << 16) | (res[3] << 8) | res[4];
+    },
+
+    _network_address: function(ip, mask) {
+        var maskbits = 0;
+        for (var i = 31 - mask; i >= 0; i--) {
+            ip &= ~1 << i;
+        }
+        return ip;
+    },
+
+    _getSubnetForMask: function(node, address, mask) {
+
+        if (node[2]) {
+            var ip = [];
+            ip.push(this._getSubnetForMask(node[2][0], address, mask + 1));
+            ip.push(this._getSubnetForMask(node[2][1], address + this._subnet_addresses(mask + 1), mask + 1));
+            return ip;
+        } else {
+            return this._inet_ntoa(address);
+        }
+    },
+
+    _inet_ntoa: function(addrint) {
+        return ((addrint >> 24) & 0xff) + '.' +
+            ((addrint >> 16) & 0xff) + '.' +
+            ((addrint >> 8) & 0xff) + '.' +
+            (addrint & 0xff);
+    },
+
+    _network_address: function(ip, mask) {
+        var maskbits = 0;
+        for (var i = 31 - mask; i >= 0; i--) {
+            ip &= ~1 << i;
+        }
+        return ip;
+    },
+
+    _subnet_addresses: function(mask) {
+        return 1 << (32 - mask);
+    },
+
+    type: 'SubnetCreateUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-18 14:38:16</sys_created_on>
+        <sys_id>33d290fc1b571110c5ba97d7bd4bcbbb</sys_id>
+        <sys_name>SubnetCreateUtils</sys_name>
+        <sys_package display_value="Subnet Allocation" source="x_232327_subnets">a7575b641b531110c5ba97d7bd4bcbdb</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Subnet Allocation">a7575b641b531110c5ba97d7bd4bcbdb</sys_scope>
+        <sys_update_name>sys_script_include_33d290fc1b571110c5ba97d7bd4bcbbb</sys_update_name>
+    </sys_script_include>
+</record_update>

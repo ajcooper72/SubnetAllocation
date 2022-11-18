@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-18 10:17:42</sys_created_on>
+        <sys_id>1db75f281b531110c5ba97d7bd4bcb27</sys_id>
+        <sys_name>x_232327_subnets_subnet.x_232327_subnets.admin</sys_name>
+        <sys_package display_value="Subnet Allocation" source="x_232327_subnets">a7575b641b531110c5ba97d7bd4bcbdb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Subnet Allocation">a7575b641b531110c5ba97d7bd4bcbdb</sys_scope>
+        <sys_security_acl display_value="x_232327_subnets_subnet">55b75f281b531110c5ba97d7bd4bcb25</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_1db75f281b531110c5ba97d7bd4bcb27</sys_update_name>
+        <sys_user_role display_value="x_232327_subnets.admin" name="x_232327_subnets.admin">6e67d7281b531110c5ba97d7bd4bcb64</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

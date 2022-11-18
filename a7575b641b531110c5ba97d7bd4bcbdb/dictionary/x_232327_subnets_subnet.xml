@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" db_object_id="3cb71f281b531110c5ba97d7bd4bcb49" extends="dl_matcher" label="Subnet" max_length="40" name="x_232327_subnets_subnet" type="collection">
+        <element label="Environment" max_length="10" name="environment" type="string"/>
+        <element label="Group" max_length="100" name="group" type="string"/>
+        <element label="Location" max_length="5" name="location" type="string"/>
+        <element label="Network 21" max_length="40" name="network_21" type="ip_addr"/>
+        <element label="Network 22" max_length="40" name="network_22" type="ip_addr"/>
+        <element label="Network 23" max_length="40" name="network_23" type="ip_addr"/>
+        <element label="Network 24" max_length="40" name="network_24" type="ip_addr"/>
+        <element label="Network 25" max_length="40" name="network_25" type="ip_addr"/>
+        <element label="Network 26" max_length="40" name="network_26" type="ip_addr"/>
+        <element label="Network 27" max_length="40" name="network_27" type="ip_addr"/>
+        <element label="Network 28" max_length="40" name="network_28" type="ip_addr"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="RITM" max_length="80" name="ritm" type="string"/>
+        <element label="Subnet parent" max_length="40" name="subnet_parent" type="integer"/>
+        <element label="Subnet used" max_length="40" name="subnet_used" type="integer"/>
+    </element>
+</database>
